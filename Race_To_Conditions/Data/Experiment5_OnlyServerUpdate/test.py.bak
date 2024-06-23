@@ -1,0 +1,24 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('sphereOne.csv', delimiter=';', decimal=",")
+
+print(df)
+print(df.keys)
+
+x = df['Time']
+y = df['Position']
+
+print(y)
+
+print(type(y[0]))
+print(type(y[1]))
+print(type(y[2]))
+print(type(y[3]))
+
+plt.scatter(x, y, alpha=0)
+
+plt.gcf().autofmt_xdate()
+
+plt.show()
+

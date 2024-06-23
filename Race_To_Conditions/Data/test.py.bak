@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('sphereActual.csv', delimiter=';', decimal=",")
+
+print(df)
+print(df.keys)
+
+x = df['Time']
+y = df['Position']
+
+print(y)
+
+print(type(df['ActualTime'][0]))
+print(type(df['ActualTime'][1]))
+print(type(df['ActualTime'][2]))
+print(type(df['ActualTime'][3]))
+plt.scatter(x, y, alpha=0.1)
+
+plt.gcf().autofmt_xdate()
+
+plt.show()
+
